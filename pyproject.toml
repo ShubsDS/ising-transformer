@@ -1,0 +1,19 @@
+[project]
+name = "mars-ising-lattice"
+version = "0.1.0"
+description = "Neural sampler for the 2D Ising model at the critical temperature."
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "torch>=2.2",
+    "numpy>=1.26",
+    "numba>=0.59",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
