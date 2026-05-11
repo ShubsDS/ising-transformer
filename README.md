@@ -1,19 +1,14 @@
 # Ising Transformer
 
-A small autoregressive transformer that learns to approximately sample $16\times16$
+An autoregressive transformer that learns to approximately sample $16\times16$
 spin configurations of the 2D ferromagnetic Ising model at the critical temperature
 $T_c = 2/\ln(1+\sqrt{2}) \approx 2.2692$.
 
-Critical-point sampling is hard: the correlation length diverges, configurations
-have power-law correlations on all scales, and a Markov chain like single-spin
-Metropolis suffers crippling critical slowing down. We use a cluster algorithm
+ We use a cluster algorithm
 (Wolff) only as a teacher to generate ground truth, and train a neural network
 to produce one-shot, decorrelated samples that approximate the same Boltzmann
 distribution.
 
-The design rationale and the failure modes we explicitly designed around are in
-[`PLAN.md`](PLAN.md). This README focuses on **what the model is** and **what
-the evaluation actually measures**.
 
 ---
 
